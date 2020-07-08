@@ -30,7 +30,7 @@ python3 setup.py install
 + evaluate.py
 
 # 2. 示例
-CRF++工具可以用于各类序列标注任务，如分词、词性标注、NER等。在./CRF++-0.58/examples/目录下。每个序列标注项目(如ner/)文件夹下应至少包含以下文件：
+CRF++工具可以用于各类序列标注任务，如分词、词性标注、NER等。在./CRF++-0.58/examples/目录下，每个序列标注项目(如ner/)文件夹下应至少包含以下文件：
 + run.sh 训练、测试、评估的脚本文件
 + template 特征模板文件
 + train.data 训练集输入文件
@@ -38,14 +38,10 @@ CRF++工具可以用于各类序列标注任务，如分词、词性标注、NER
 
 ## 2.1 详细步骤
 + 提取文本特征，准备训练数据文件
-```
-train.data
-test.data
-```
+  - ./train.data
+  - ./test.data
 + 准备特征模板文件
-```
-template
-```
+  - ./template
 + 训练模型：在训练集上训练，输出模型文件crfpp_model.bin
 ```
 crf_learn -p 4 -c 10 -f 3 template train.data crfpp_model.bin
