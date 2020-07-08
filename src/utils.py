@@ -121,3 +121,18 @@ def run_eval(fin, head=2, verbose=True):
                 y_pred.append(y2)
         f1 = calc_metrics(y_true, y_pred, verbose)
         return f1
+
+
+def gen_grid_paras(parameters):
+    keys, pools = [], []
+    for k, v in parameters.items():
+        keys.append(k)
+        pools.append(tuple(v))
+    result = [[]]
+    for pool in pools:
+        result = [x + [y] for x in result for y in pool]
+    results = {}
+    for idr, i in enumerate(result):
+        results[idr] = {k: v for k, v in zip(keys, i)}
+    print(len(results), results)
+    return results
