@@ -30,7 +30,7 @@ python3 setup.py install
 + evaluate.py: 进行分类指标评价(如f1)；
 
 # 2. 示例
-CRF++工具可以用于各类序列标注任务，如分词、词性标注、命名实体识别(NER)等。在./CRF++-0.58/examples/目录下，每个序列标注项目(如ner/)文件夹下应至少包含以下文件：
+CRF++工具可以用于各类序列标注任务，如分词、词性标注、命名实体识别(NER)等。在./pycrfpp/examples/目录下，每个序列标注项目(如ner/)文件夹下应至少包含以下文件：
 + run.sh 训练、测试、评估的脚本文件
 + template 特征模板文件
 + train.data 训练集输入文件
@@ -50,4 +50,4 @@ crf_learn -p 4 -c 1 -f 1 template train.data crfpp_model.bin
 ```
 crf_test -m crfpp_model.bin test.data > test.result
 ```
-
++ 最后，利用CrfWrapper类(./pycrfpp/crf_wrapper.py)加载训练后的模型进行序列标注预测
