@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# coding=utf-8
+
 from tqdm import tqdm
 from sklearn.metrics import f1_score, classification_report
 

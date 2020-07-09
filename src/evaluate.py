@@ -1,9 +1,11 @@
+#!/usr/bin/env python
+# coding=utf-8
 import argparse
 from utils import calc_metrics, run_eval
 
 if __name__ == "__main__":
     # Define and parse program input
-    parser = argparse.ArgumentParser(description="",
+    parser = argparse.ArgumentParser(description="evaluate classification metrics",
                                      formatter_class=argparse.RawTextHelpFormatter,
                                      usage="%(prog)s [-h] [options] -file FILE -head HEAD")
     parser.add_argument("-file", help="The path to the labeled file.", required=True)
